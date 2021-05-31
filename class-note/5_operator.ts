@@ -28,8 +28,18 @@ interface Person {
     age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
+// 유니온
+// function askSomeone(someone: Developer | Person) {
+//     someone.name;
+//     // someone.skill
+//     // someone.age
+// }
+// 인터섹션
+function askSomeone(someone: Developer & Person) {
     someone.name;
-    // someone.skill
-    // someone.age
+    someone.skill
+    someone.age
 }
+
+// let seho4: string | number | boolean;
+// let capt4: string & number & boolean;
