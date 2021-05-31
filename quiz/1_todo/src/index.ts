@@ -1,7 +1,7 @@
 interface Todo { 
   id: number;
   title: string;
-  done: boolean
+  done: boolean;
 };
 let todoItems: Array<Todo>;
 
