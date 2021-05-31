@@ -1,7 +1,7 @@
 interface User {
     age: number;
     name: string;
-};
+}
 
 // 변수에 인터페이스 활용
 let seho: User = {
@@ -46,9 +46,23 @@ let obj: StringRegexDictionary = {
     // sth: /abc/
     cssFile: /\.css$/,
     jsFile: /\.js%/
-}
+};
 // obj['cssFile']  = 'a';
 
-Object.keys(obj).forEach(value => {
+Object.keys(obj).forEach(value => {});
 
-});
+// 인터페이스 확장
+interface Person {
+    name: string;
+    age: number;
+}
+
+interface Developer extends Person {
+    language: string;
+}
+
+let pcw: Developer = {
+    name: '박찬우',
+    age: 29,
+    language: 'ts'
+};
