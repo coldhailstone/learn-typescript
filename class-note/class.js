@@ -1,5 +1,11 @@
 // ES2015 (ES6)
 
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+const capt5 = new Person('캡틴', 100);
+
 class Person {
     name;
     age;
