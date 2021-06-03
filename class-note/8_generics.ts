@@ -47,3 +47,13 @@ interface Dropdown<T> {
     selected: boolean;
 }
 const obj2: Dropdown<number> = { value: 10, selected: false };
+
+// 제네릭의 타입 제한
+function logTextLength<T>(text: T[]): T[] {
+    console.log(text.length);
+    text.forEach(text => {
+        console.log(text);
+    });
+    return text;
+}
+logTextLength<string>(['hi', 'abc']);
