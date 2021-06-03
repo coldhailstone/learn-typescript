@@ -13,12 +13,18 @@
 // logText('하이');
 // logText<string>('하이');
 
-function logText(text: string) {
+// function logText(text: string) {
+//     console.log(text);
+//     return text;
+// }
+// function logNumber(num: number) {
+//     console.log(num);
+//     return num;
+// }
+
+function logText(text: string | number) {
     console.log(text);
     return text;
 }
-
-function logNumber(num: number) {
-    console.log(num);
-    return num;
-}
+const a = logText('test');
+logText(1);
