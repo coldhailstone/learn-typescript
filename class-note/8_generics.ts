@@ -22,9 +22,17 @@
 //     return num;
 // }
 
-function logText(text: string | number) {
+// function logText(text: string | number) {
+//     console.log(text);
+//     return text;
+// }
+// const a = logText('test');
+// logText(1);
+
+function logText<T>(text: T): T {
     console.log(text);
     return text;
 }
-const a = logText('test');
-logText(1);
+const str2 = logText<string>('a');
+str.split('');
+const login = logText<boolean>(true);
