@@ -6,18 +6,18 @@ interface ProductNumber {
   value: number,
   selected: boolean
 }
-interface Option<T> {
+interface DropdownItem<T> {
   value: T,
   selected: boolean
 }
 
-const emails: Array<Option<string>> = [
+const emails: Array<DropdownItem<string>> = [
   { value: 'naver.com', selected: true },
   { value: 'gmail.com', selected: false },
   { value: 'hanmail.net', selected: false },
 ];
 
-const numberOfProducts: Array<Option<number>> = [
+const numberOfProducts: Array<DropdownItem<number>> = [
   { value: 1, selected: true },
   { value: 2, selected: false },
   { value: 3, selected: false },
@@ -31,7 +31,7 @@ const numberOfProducts: Array<Option<number>> = [
 //   return option;
 // }
 
-function createDropdownItem<T>(item: Option<T>): HTMLOptionElement {
+function createDropdownItem<T>(item: DropdownItem<T>): HTMLOptionElement {
   const option = document.createElement('option');
   option.value = item.value.toString();
   option.innerText = item.value.toString();
