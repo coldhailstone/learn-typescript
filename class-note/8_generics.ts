@@ -36,3 +36,14 @@ function logText<T>(text: T): T {
 const str2 = logText<string>('a');
 str.split('');
 const login = logText<boolean>(true);
+
+// 인터페이스에 제네릭을 선언하는 방법
+// interface Dropdown {
+//     value: string;
+//     selected: boolean;
+// }
+interface Dropdown<T> {
+    value: T;
+    selected: boolean;
+}
+const obj2: Dropdown<number> = { value: 10, selected: false };
