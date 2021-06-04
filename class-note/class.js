@@ -1,4 +1,4 @@
-// ES2015 (ES6)
+ES2015 (ES6)
 
 function Person(name, age) {
     this.name = name;
