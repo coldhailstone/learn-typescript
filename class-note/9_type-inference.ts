@@ -1,3 +1,4 @@
+// 타입 추론 기본 1
 let a = 'abc';
 
 function getB(b = 10) {
@@ -5,3 +6,13 @@ function getB(b = 10) {
     return b + c;
 }
 10 + '10' // '1010'
+
+// 타입 추론 기본 2
+interface Dropdown<T> {
+    value: T;
+    title: string;
+}
+let shoppingItem: Dropdown<string> = {
+    value: 'abc',
+    title: 'hello'
+}
