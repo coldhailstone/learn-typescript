@@ -33,3 +33,6 @@ let detailedItem: DetailedDropdown<string> = {
     value: 'abc',
     title: 'hello'
 }
+
+// Best Common Type
+let arr = [1, 2, true];
