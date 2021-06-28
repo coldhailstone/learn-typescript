@@ -36,3 +36,29 @@ type UpdateProduct = Partial<Product>;
 function updateProductItem(productItem: UpdateProduct) {
 
 }
+
+// 4. 유틸리티 타입 구현하기 - Partial
+interface UserProfile {
+    username: string;
+    email: string;
+    profilePhotoUrl: string;
+}
+// #1
+// type UserProfileUpdate = {
+//     username?: UserProfile['username'];
+//     email?: UserProfile['email'];
+//     profilePhotoUrl?: UserProfile['profilePhotoUrl'];
+// }
+// #2
+// type UserProfileUpdate = {
+//     [p in 'username' | 'email' | 'profilePhotoUrl']?: UserProfile[p];
+// }
+// type UserProfileKeys = keyof UserProfile;
+// #3
+type UserProfileUpdate = {
+    [P in keyof UserProfile]?: UserProfile[P];
+}
+// #4
+type Subset<T> = {
+    [P in keyof T]?: T[P];
+}
