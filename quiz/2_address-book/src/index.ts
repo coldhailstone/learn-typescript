@@ -104,6 +104,9 @@ class AddressBook {
   /* ------------------------------------------------ */
 }
 
+var div = document.querySelector('.container') as HTMLDivElement;
+div.innerText;
+
 let heroes = [
   { name: 'Tony', age: 30 },
   { name: 'Captain', age: 100 }
