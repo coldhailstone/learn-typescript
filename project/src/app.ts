@@ -2,7 +2,7 @@
 function $(selector: string) {
   return document.querySelector(selector);
 }
-function getUnixTimestamp(date: any) {
+function getUnixTimestamp(date: string | number | Date) {
   return new Date(date).getTime();
 }
 
@@ -17,7 +17,7 @@ const recoveredList = $('.recovered-list');
 const deathSpinner = createSpinnerElement('deaths-spinner');
 const recoveredSpinner = createSpinnerElement('rec˝overed-spinner');
 
-function createSpinnerElement(id: any) {
+function createSpinnerElement(id: string) {
   const wrapperDiv = document.createElement('div');
   wrapperDiv.setAttribute('id', id);
   wrapperDiv.setAttribute(
