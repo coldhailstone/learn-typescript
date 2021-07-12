@@ -7,7 +7,6 @@ function getUnixTimestamp(date: string | number | Date) {
 }
 
 // DOM
-var a: Element | HTMLElement | HTMLParagraphElement
 const confirmedTotal = $('.confirmed-total') as HTMLSpanElement;
 const deathsTotal = $('.deaths') as HTMLParagraphElement;
 const recoveredTotal = $('.recovered') as HTMLParagraphElement;
@@ -23,7 +22,7 @@ function createSpinnerElement(id: string) {
   wrapperDiv.setAttribute('id', id);
   wrapperDiv.setAttribute(
     'class',
-    'spinner-wrapper flex justify-center align-center',
+    'spinner-wrapper flex justify-center align-center'
   );
   const spinnerDiv = document.createElement('div');
   spinnerDiv.setAttribute('class', 'ripple-spinner');
