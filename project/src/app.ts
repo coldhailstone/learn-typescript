@@ -1,8 +1,7 @@
 // 라이브러리 로딩
 import axios from 'axios';
-// import Chart from 'Chart';
 // 변수, 함수 임포트 문법
-// import {} from 'location';
+import { Chart } from 'chart.js';
 
 // utils
 function $(selector: string) {
