@@ -1,5 +1,5 @@
 // 라이브러리 로딩
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { Chart } from 'chart.js';
 
 // utils
@@ -40,11 +40,19 @@ function createSpinnerElement(id: string) {
 let isDeathLoading = false;
 const isRecoveredLoading = false;
 
+interface CovidSummaryResponse {
+  Countries: any[];
+  Date: string;
+  Global: any;
+  Message: string;
+}
+
 // api
-function fetchCovidSummary() {
+function fetchCovidSummary(): Promise<AxiosResponse<CovidSummaryResponse>> {
   const url = 'https://api.covid19api.com/summary';
   return axios.get(url);
 }
+fetchCovidSummary().then(res => res);
 
 enum CovidStatus {
   Confirmed = 'confirmed',
