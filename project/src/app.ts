@@ -59,7 +59,7 @@ enum CovidStatus {
 }
 
 function fetchCountryInfo(
-  countryCode: string,
+  countryCode: string | undefined,
   status: CovidStatus
 ): Promise<AxiosResponse<CountrySummaryResponse>> {
   // status params: confirmed, recovered, deaths
@@ -86,7 +86,9 @@ async function handleListClick(event: Event) {
     event.target instanceof HTMLParagraphElement ||
     event.target instanceof HTMLSpanElement
   ) {
-    selectedId = event.target.parentElement.id;
+    selectedId = event.target.parentElement
+      ? event.target.parentElement.id
+      : undefined;
   }
   if (event.target instanceof HTMLLIElement) {
     selectedId = event.target.id;
